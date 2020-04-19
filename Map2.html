@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* Set the size of the div element that contains the map */
+      #myFrame {
+        height: 600px;  /* The height is 400 pixels */
+        width: 60%;  /* The width is the width of the web page */
+       }
+    </style>
+	<script type="text/javascript">
+        function codeAddress() {
+		console.log(":::::" + document.getElementById('myFrame'));
+		var lat = "22.6061°+N";
+		var longTude = "+88.4139°+E";
+		var finalLoc = lat + "," + longTude;
+		//alert(finalLoc);
+		var loc= "https://www.google.com/maps/embed/v1/search?key=AIzaSyCPHOaXIcMUTrP3uhh6ekv7NHVoZvwTIqw&q=" + finalLoc+"&maptype=satellite&zoom=15"
+             document.getElementById('myFrame').setAttribute('src', loc);
+        }
+        window.onload = codeAddress;
+        </script>
+	
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <!--The div element for the map -->
+    <!--<div id="map">
+        <iframe id= "map"
+  width="600"
+  height="450"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyCPHOaXIcMUTrP3uhh6ekv7NHVoZvwTIqw&origin=Chennai&destination=Kolkata&avoid=tolls|highways" allowfullscreen>
+</iframe>
+    </div>
+	
+	<div> -->
+	
+	<iframe id= "myFrame"
+  width="450"
+  height="250"
+  frameborder="0" style="border:0"
+  src="" allowfullscreen>
+</iframe>
+	</div>
+	
+
+	
+    
+
+</html>
